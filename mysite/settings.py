@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-84o6f4s5wiardy257xm73x^q_i@!v#qb^!s22dc$_=#6mauuyj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mysitev2-env.eba-2w9f9be5.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["mysitev2-env.eba-2w9f9be5.us-west-2.elasticbeanstalk.com",'172.31.31.23']
 
 # Application definition
 
@@ -76,7 +76,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": str(BASE_DIR / "db.sqlite3"),
     }
 }
 
