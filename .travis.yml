@@ -5,12 +5,15 @@ python:
 
 install:
   - pip install -r requirements.txt
-  - pip install black flake8
+  - pip install coverage black flake8
 
 script:
   - black . 
   - flake8
+  - coverage run --source=mysite,polls manage.py test 
+  - coverage report  
   - pytest
+  
 
 deploy:
   provider: elasticbeanstalk
