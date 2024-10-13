@@ -5,10 +5,11 @@ python:
 
 install:
   - pip install -r requirements.txt
-  - pip install black  # Install black for code formatting check
+  - pip install black flake8
 
 script:
   - black --check . 
+  - flake8
   - pytest
 
 deploy:
